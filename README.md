@@ -4,7 +4,7 @@ Nama : Febrian Zaki Hidayatulloh
 Nim  : L0325045  
 Tema : Sistem Perpustakaan  
 
-Program Java ini merupakan aplikasi sederhana pengelolaan data buku perpustakaan dengan tema "Sistem Perpustakaan". Program menyimpan data beberapa buku ke dalam ArrayList, menampilkan data tersebut, memproses peminjaman buku, menghitung denda keterlambatan, mengolah string (judul & kode buku), serta mendemonstrasikan penanganan error (exception handling) baik dari input pengguna maupun operasi aritmatika. Program ini dibuat untuk memenuhi 9 kriteria tugas pemrograman Java dasar dengan menerapkan konsep Pemrograman Berorientasi Objek (OOP), dan terdiri dari 2 class terpisah: `Buku.java` (model data) dan `SistemPerpustakaan.java` (program utama).
+Program Java ini merupakan aplikasi sederhana pengelolaan data buku perpustakaan dengan tema "Sistem Perpustakaan". Program menyimpan data beberapa buku ke dalam ArrayList, menampilkan data tersebut, memproses peminjaman buku, menghitung denda keterlambatan, mengolah string (judul & kode buku), serta mendemonstrasikan penanganan error (exception handling) baik dari input pengguna maupun operasi aritmatika. Program ini dibuat untuk memenuhi 9 kriteria tugas pemrograman Java dasar dengan menerapkan konsep Pemrograman Berorientasi Objek (OOP), dan terdiri dari 2 class terpisah: `Buku.java` (model data) dan `SistemPerpustakaan.java` (program utama).   
 Alur Program :  
 1. Inisialisasi Data — Program membuat ArrayList dan menambahkan 3 data buku (Pemrograman Java Dasar, Struktur Data, Algoritma dan Logika) sebagai objek dari class Buku.
 2. Menampilkan Data — Program menggunakan looping for-each untuk menampilkan seluruh data buku satu per satu dengan method tampilkanInfo().
