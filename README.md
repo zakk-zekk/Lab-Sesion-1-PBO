@@ -17,6 +17,7 @@ Alur Program :
 8. Penutup — Program menampilkan total stok tersisa di perpustakaan beserta grade ketersediaan buku secara keseluruhan.
 
 ```
+Output
 === DAFTAR SEMUA BUKU ===
 Kode   : B001
 Judul  : PEMROGRAMAN JAVA DASAR (22 karakter)
