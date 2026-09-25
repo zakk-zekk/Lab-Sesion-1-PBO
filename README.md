@@ -4,16 +4,17 @@ Nama : Febrian Zaki Hidayatulloh
 Nim  : L0325045  
 Tema : Sistem Perpustakaan  
 
-Program Java ini merupakan aplikasi sederhana pengelolaan data buku perpustakaan dengan tema "Sistem Perpustakaan". Program menyimpan data beberapa buku ke dalam ArrayList, menampilkan data tersebut, memproses peminjaman buku, menghitung denda keterlambatan, mengolah string (judul & kode buku), serta mendemonstrasikan penanganan error (exception handling) baik dari input pengguna maupun operasi aritmatika. Program ini dibuat untuk memenuhi 9 kriteria tugas pemrograman Java dasar dengan menerapkan konsep Pemrograman Berorientasi Objek (OOP), dan terdiri dari 2 class terpisah: `Buku.java` (model data) dan `SistemPerpustakaan.java` (program utama).  
+Program Java ini merupakan aplikasi sederhana pengelolaan data buku perpustakaan dengan tema "Sistem Perpustakaan". Program menyimpan data beberapa buku ke dalam ArrayList, menampilkan data tersebut, memproses peminjaman buku, menghitung denda keterlambatan, mengolah string (judul buku), serta mendemonstrasikan penanganan error (exception handling). Program ini dibuat untuk memenuhi 9 kriteria tugas pemrograman Java dasar dengan menerapkan konsep Pemrograman Berorientasi Objek (OOP), dan terdiri dari 2 class dalam satu package `Labsesion`: `Buku.java` (model data) dan `SistemPerpustakaan.java` (program utama).
 
-Alur Program :
+Alur Program
 1. Inisialisasi Data — Program membuat ArrayList dan menambahkan 3 data buku (Pemrograman Java Dasar, Struktur Data, Algoritma dan Logika) sebagai objek dari class Buku.
 2. Menampilkan Data — Program menggunakan looping for-each untuk menampilkan seluruh data buku satu per satu dengan method tampilkanInfo().
 3. Proses Peminjaman — Program mengecek stok setiap buku menggunakan struktur if-else di dalam method pinjamBuku(); jika stok tersedia maka stok dikurangi, jika habis maka peminjaman gagal.
-4. Input Interaktif — Program meminta pengguna memasukkan kode buku yang ingin dipinjam, lalu mencocokkannya dengan data yang ada menggunakan method equalsIgnoreCase(). Program juga meminta input jumlah hari peminjaman untuk menghitung denda.
-5. Mengolah String & Character — Program mengubah input kode buku menjadi huruf kapital (toUpperCase()) dan membersihkan spasi (trim()), mengambil panjang judul buku (length()), serta menentukan grade ketersediaan buku dalam bentuk tipe data char (A/B/C/D) berdasarkan total stok tersisa menggunakan switch-case.
-6. Menangani Error — Program mendemonstrasikan exception handling untuk tiga skenario: kode buku yang tidak ditemukan (IllegalArgumentException), input yang bukan angka (InputMismatchException), dan simulasi pembagian nol saat menghitung rata-rata denda (ArithmeticException), semuanya ditangani dalam blok try-catch.
-7. Penutup — Program menampilkan total stok tersisa di perpustakaan beserta grade ketersediaan buku secara keseluruhan.
+4. Mengolah String — Program mengubah judul buku menjadi huruf kapital (toUpperCase()) dan menghitung panjang judul (length()) saat menampilkan info buku.
+5. Menghitung Denda — Program menghitung denda keterlambatan buku pertama berdasarkan selisih hari pinjam dengan batas maksimal pinjam (konstanta MAKS_HARI_PINJAM), dikalikan konstanta DENDA_PER_HARI.
+6. Menangani Error — Program mendemonstrasikan exception handling menggunakan blok try-catch untuk menangkap ArithmeticException dari simulasi pembagian nol saat menghitung rata-rata denda.
+7. Menentukan Grade — Program menghitung total stok tersisa dari seluruh buku, lalu menentukan grade ketersediaan (tipe data char: A/B/C/D) menggunakan struktur switch-case dan if-else.
+8. Penutup — Program menampilkan total stok tersisa di perpustakaan beserta grade ketersediaan buku secara keseluruhan.
 
 ```
 === DAFTAR SEMUA BUKU ===
@@ -36,17 +37,15 @@ Stok   : 5
 Status : Tersedia
 -------------------------
 
-=== PROSES PEMINJAMAN (INPUT USER) ===
-Masukkan kode buku yang ingin dipinjam (contoh: B001): B001
+=== PROSES PEMINJAMAN ===
 Pemrograman Java Dasar berhasil dipinjam. Sisa stok: 2
+Struktur Data GAGAL dipinjam (stok habis).
+Algoritma dan Logika berhasil dipinjam. Sisa stok: 4
 
-=== HITUNG DENDA (INPUT USER) ===
-Masukkan jumlah hari buku dipinjam: 10
-Hari terlambat: 3
-Total denda: Rp6000.0
-Masukkan jumlah buku yang telat (untuk hitung rata-rata denda): 0
-Terjadi kesalahan: Tidak bisa membagi dengan nol! (/ by zero)
+=== HITUNG DENDA & SIMULASI ERROR ===
+Denda Pemrograman Java Dasar (telat 3 hari): Rp6000.0
+Rata-rata denda: Infinity
 
-Total stok tersisa di perpustakaan: 7
+Total stok tersisa di perpustakaan: 6
 Grade ketersediaan buku: B
 ```
